@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  body {
+       font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    transition: margin-right 0.3s ease-in-out;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(to right, #ff6347, #ff4500);
+    color: white;
+    padding: 20px 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+nav .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Impact', sans-serif;
+}
+
+/* Button to trigger the sidebar */
+.settings-btn {
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #006400;
+    padding: 12px 24px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.settings-btn:hover {
+    background-color: #004d00;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar (hidden by default) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    z-index: 100;
+    transition: right 0.3s ease-in-out;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.sidebar ul li a:hover {
+    background-color: #006400;
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    background-color: #444;
+    padding-left: 20px;
+}
+
+.dropdown a {
+    padding: 8px 20px;
+    font-size: 16px;
+}
+
+.dropdown a:hover {
+    background-color: #006400;
+}
+
+.dropdown-button {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-button:hover {
+    background-color: #006400;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    transition: margin-right 0.3s ease-in-out;
+}
+
+/* Hero Section */
+section#home {
+    background-image: url('https://i.imgur.com/F9rm6DE.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section#home h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+section#home p {
+    font-size: 1.375rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #333;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* Student Information Section */
+.student-info {
+    font-size: 1.125rem;
+    color: #ddd;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.student-info:hover {
+    background-color: #006400;
+    transform: translateY(-5px);
+}
+
+.student-info ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.student-info ul li {
+    font-size: 1.125rem;
+}
+
+.student-image {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+@media (max-width: 1536px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .settings-btn {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    section#home h2 {
+        font-size: 2.5rem;
+    }
+
+    section#home p {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .student-info {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    body {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 14px 4%;
+    }
+
+    nav .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .settings-btn {
+        font-size: 0.85rem;
+        padding: 9px 18px;
+    }
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        padding: 14px;
+    }
+
+    section#home h2 {
+        font-size: 2.3rem;
+    }
+
+    section#home p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 38px 14px;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .student-info {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 12px 3%;
+    }
+
+    nav .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .settings-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    section#home h2 {
+        font-size: 2rem;
+    }
+
+    section#home p {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 35px 12px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.05rem;
+    }
+
+    .student-info {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 11px;
+    }
+
+    header {
+        padding: 10px 2%;
+    }
+
+    nav .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .settings-btn {
+        font-size: 0.75rem;
+        padding: 7px 14px;
+    }
+
+    .sidebar {
+        width: 160px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    section#home h2 {
+        font-size: 1.8rem;
+    }
+
+    section#home p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .student-info {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 10px;
+    }
+
+    header {
+        padding: 8px 1%;
+    }
+
+    nav .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .settings-btn {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+
+    .sidebar {
+        width: 140px;
+    }
+
+    .main-content {
+        padding: 8px;
+    }
+
+    section#home h2 {
+        font-size: 1.5rem;
+    }
+
+    section#home p {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 25px 8px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .student-info {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 475px) {
+    body {
+        font-size: 9px;
+    }
+
+    header {
+        padding: 6px 1%;
+    }
+
+    nav .logo h1 {
+        font-size: 1rem;
+    }
+
+    .settings-btn {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+
+    .sidebar {
+        width: 120px;
+    }
+
+    .main-content {
+        padding: 6px;
+    }
+
+    section#home h2 {
+        font-size: 1.3rem;
+    }
+
+    section#home p {
+        font-size: 0.8rem;
+    }
+
+    section {
+        padding: 20px 6px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .student-info {
+        font-size: 0.75rem;
+    }
+
+    footer {
+        font-size: 0.65rem;
+    }
+}

@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT Students Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header and Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h1>Welcome to the BSIT Students Hub!</h1>
+        </div>
+        <button class="settings-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar" role="button">Settings</button>
+    </header>
+
+    <!-- Vertical Sidebar (Initially Hidden on the Right) -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+              <li><a href="#home" aria-label="Go to Home">Home</a></li>
+            <li><a href="#about" aria-label="Learn About Us">About</a></li>
+            <li><a href="#student" aria-label="View Student Information">Student Info</a></li>
+            <li>
+                <button class="dropdown-button" onclick="toggleDropdown()"><strong>BSIT Course</strong></button>
+                <div class="dropdown" id="bsitDropdown">
+                    <br><a href="https://plmun.edu.ph/college-of-information-technology-and-computer-studies.php" target="_blank">CITCS PLMun</a>
+                    <br><a href="https://en.wikipedia.org/wiki/Bachelor_of_Science_in_Information_Technology" target="_blank">Wikipedia</a>
+                    <br><a href="https://www.facebook.com/share/1BMaXcNvEt/" target="_blank">BSIT-PLMun fb page</a>
+                    <br><a href="#" onclick="toggleDropdown()">Close</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home">
+            <h2></h2>
+            <p></p>
+        </section>
+           <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a group of dedicated and passionate Bachelor of Science in Information Technology (BSIT-1M) students from Pamantasan Lungsod ng Muntinlupa, collaborating on an exciting website project. With a shared interest in web development and digital solutions, our group combines diverse skills and expertise in coding, design, and user experience to create a seamless and functional website!</p>
+        </section>
+
+        <!-- Student Information Section -->
+        <section id="student">
+            <h2>Student Information</h2>
+            <div class="student-info">
+                <p>Our project was created by a talented team of BSIT students at Pamantasan Lungsod ng Muntinlupa.</p>
+                <p>Meet the team:</p>
+                <ul>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('ryan')">Ryan, Bryan Paul</span>
+                        <img id="ryan" class="student-image" src="https://i.imgur.com/LKRJ3QE.jpeg" alt="Ryan's photo">
+                    </li>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('bismar')">Bismar, John Mark</span>
+                        <img id="bismar" class="student-image" src="https://via.placeholder.com/150" alt="Bismar's photo">
+                    </li>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('saavedra')">Saavedra, Mark</span>
+                        <img id="saavedra" class="student-image" src="https://i.imgur.com/TdBmcG2.jpeg" alt="Saavedra's photo">
+                    </li>
+                    <li>
+                           <span class="student-name" onclick="toggleImage('parohino')">Parohino, Hanz Rey</span>
+                        <img id="parohino" class="student-image" src="https://i.imgur.com/gcnNHeS.jpeg" alt="Parohino's photo">
+                    </li>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('jayson')">Jayson Fundador</span>
+                        <img id="jayson" class="student-image" src="https://via.placeholder.com/150" alt="Jayson Fundador's photo">
+                    </li>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('rayven')">Rayven Llanto</span>
+                        <img id="rayven" class="student-image" src="https://via.placeholder.com/150" alt="Rayven Llanto's photo">
+                    </li>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('sam')">Sam Gabriell</span>
+                        <img id="sam" class="student-image" src="https://i.imgur.com/dJYryEM.jpeg" alt="Sam Gabriell's photo">
+                    </li>
+                    <li>
+                        <span class="student-name" onclick="toggleImage('jerome')">Rian, Jerome</span>
+                        <img id="jerome" class="student-image" src="https://via.placeholder.com/150" alt="Jerome's photo">
+                    </li>
+                </ul>
+                <p>This website showcases our combined skills in web development, design, and problem-solving, aiming to create an engaging platform for BSIT students and academic resources.</p>
+            </div>
+        </section>
+ <!-- Footer -->
+        <footer>
+            <p>&copy; BSIT students. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
